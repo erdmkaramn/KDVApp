@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#708090"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/baslik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:background="#701090"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="KDV HESAPLA"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:typeface="sans" />
+
+    <EditText
+        android:id="@+id/tutar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/baslik"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:height="50dp"
+        android:background="@drawable/edt_bg"
+        android:hint="Tutar"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></EditText>
+
+    <EditText
+        android:id="@+id/kdvorani"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:height="50dp"
+        android:background="@drawable/edt_bg"
+        android:hint="KDV Oranı %"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></EditText>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:layout_below="@+id/kdvorani"
+
+    android:background="#ffffff"></FrameLayout>
+
+
+    <TextView
+        android:id="@+id/kdvdahil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kdvorani"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="KDV Dahil"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/kdvtutari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kdvdahil"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="KDV Tutarı: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/islemtutari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kdvtutari"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="İşlem Tutarı: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/toplamtutar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/islemtutari"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Toplam Tutar: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toplamtutar"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"></FrameLayout>
+
+
+    <TextView
+        android:id="@+id/kdvharic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toplamtutar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="KDV Hariç"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/kdvtutari_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kdvharic"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="KDV Tutarı: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/islemtutari_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kdvtutari_h"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="İşlem Tutarı: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/toplamtutar_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/islemtutari_h"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Toplam Tutar: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+
+    <Button
+        android:id="@+id/hesapla"
+        android:layout_width="305dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/toplamtutar_h"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#701090"
+        android:gravity="center"
+        android:hint="Hesapla"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"></Button>
+</RelativeLayout>
